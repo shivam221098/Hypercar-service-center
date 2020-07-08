@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper car</title>
+    <style>
+        div{
+            font-family: verdana;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    {% if empty %}
+        <div><p>Waiting for the next client</p></div>
+    {% else %}
+        <div><p>Next ticket #{{next_ticket}}</p></div>
+    {% endif %}
+</center>
+</body>
+</html>

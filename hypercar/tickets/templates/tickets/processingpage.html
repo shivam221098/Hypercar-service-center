@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper car</title>
+    <style>
+        div{
+            font-family: verdana;
+            font-size: 50px;
+        }
+        h1{
+            font-family: verdana;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Queues</h1>
+        <div>
+            <p>Change oil queue: {{oil_len}}</p>
+        </div>
+        <div>
+            <p>Inflate tires queue: {{inflate_len}}</p>
+        </div>
+        <div>
+            <p>Get diagnostic queue: {{diagnostic_len}}</p>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Process next</button>
+        </form>
+    </center>
+</body>
+</html>
